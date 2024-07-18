@@ -1,1 +1,2 @@
-hello file contents
+hello file contents.
+Updates as part of new feature
