@@ -1,0 +1,13 @@
+aws configure list-profiles
+aws sts get_caller_identity
+aws sts get-caller-identity
+doskey /history
+setx TF_LOG_PATH C:\Prakash\training\AWS\Terraform_aws\terraform-debug-new.log
+setx TF_LOG DEBUG
+echo %TF_LOG%
+echo %TF_LOG_PATH%
+doskey /history > cmd.txt
+terraform plan --out=tfplans3deploy61 --var-file=variable-values.tfvars
+terraform apply tfplans3deploy61
+#terraform destroy --target='module.s3_buckets["bucket1"].aws_s3_bucket.s3_bucket' --var-file=variable-values.tfvars
+
